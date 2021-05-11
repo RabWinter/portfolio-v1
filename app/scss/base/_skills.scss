@@ -1,0 +1,65 @@
+@use '../abstracts/' as *;
+
+.skills {
+//  min-height: 30rem;
+ padding: 3rem 0;
+ background-color: var(--bg-color-dark);
+ clip-path: var(--slant-top-right);
+
+ @include breakpoint-up(large) {
+ }
+
+ &__title {
+  color: var(--secondary-light);
+  padding-bottom: 2rem;
+ }
+
+ h2 {
+  color: var(--primary-text);
+ }
+
+ &__logos--container {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 4rem;
+
+
+  @include breakpoint-up(medium) {
+
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+  }
+  
+  
+  width: 100%;
+  // height: 20rem;
+ }
+
+ &__logo {
+  height: 10rem;
+  width: 10rem;
+  background-position: center top;
+
+  &:not(:last-of-type) {
+    margin-bottom: 4rem;
+  }
+
+  &:first-child {
+   background-image: url('/assets/html-logo.svg');
+  }
+
+  &:nth-child(2) {
+    background-image: url('/assets/css-logo.svg');
+    background-size: 114%;
+    background-position: center top -12px;
+  }
+
+  &:nth-child(3) {
+    background-image: url('/assets/scss-logo.svg');
+  }
+
+  &:nth-child(4) {
+    background-image: url('/assets/js-logo.svg');
+  }
+ }
+}

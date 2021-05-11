@@ -1,0 +1,50 @@
+@use '../abstracts/' as *;
+
+.contact {
+ // min-height: 30rem;
+ padding-bottom: 6rem;
+
+//  &__inner {
+   
+//  }
+
+ &__title {
+  margin-bottom: 2rem;
+ }
+
+ form {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40rem;
+ }
+
+ input[type='text'],
+ input[type='email'],
+ textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--box-shadow);
+
+  // &:focus {
+    
+  // }
+ }
+
+ input[type='submit'] {
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+ }
+}
+
+.footer {
+ background-color: var(--bg-color-dark);
+ color: var(--secondary-light);
+ min-height: 20rem;
+}
